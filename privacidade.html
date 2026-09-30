@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matt · Privacidade</title><meta name="description" content="Política de privacidade do Matt.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2322262A%22/%3E%3Ctext x=%2232%22 y=%2243%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22800%22 font-size=%2232%22 fill=%22%23F4EBD9%22%3Em%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#FFFFFF; --bg2:#F7F6F3; --ink:#191919; --ink2:#37352F; --muted:#6B6B6B; --line:#E9E9E7;
+  --azul:#2383E2; --azul-s:#E7F3F8; --verde:#0F7B6C; --verde-s:#EDF3EC; --amarelo:#DFAB01; --amarelo-s:#FBF3DB;
+  --vermelho:#E03E3E; --vermelho-s:#FBE4E4; --roxo:#9065B0; --roxo-s:#F4F0F7; --laranja:#D9730D; --laranja-s:#FAEBDD;
+  --carvao:#22262A; --creme:#F4EBD9;
+  --r:14px; --sombra:0 1px 2px rgba(15,15,15,.06),0 8px 24px rgba(15,15,15,.08);
+  --f:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.faixa{max-width:1120px;margin:0 auto;padding:0 24px}
+.topo{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid transparent}
+.topo nav{display:flex;align-items:center;gap:28px;height:64px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.02em;margin-right:auto}
+.marca i{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--carvao);color:var(--creme);font-style:normal;font-weight:800;font-size:15px;letter-spacing:-.04em}
+.topo nav a:not(.marca):not(.btn){text-decoration:none;color:var(--ink2);font-size:15px;font-weight:500}
+.topo nav a:not(.marca):not(.btn):hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s,background .15s}
+.btn.escuro{background:var(--ink);color:#fff}
+.btn.escuro:hover{background:#000;transform:translateY(-1px)}
+.btn.claro{background:var(--bg2);color:var(--ink)}
+.btn.claro:hover{background:#EFEEEA}
+.btn.grande{padding:14px 24px;font-size:16px;border-radius:12px}
+footer.rodape{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14.5px}
+footer.rodape .faixa{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+footer.rodape .faixa > span{margin-right:auto;display:flex;align-items:center;gap:10px}
+footer.rodape a{text-decoration:none;color:var(--ink2)}
+footer.rodape a:hover{text-decoration:underline}
+@media (max-width:760px){
+  .topo nav{gap:16px}
+  .topo nav .so-grande{display:none}
+}
+.doc{padding:72px 0 96px}
+.doc .faixa{max-width:760px}
+.doc h1{font-weight:800;font-size:clamp(36px,5.5vw,52px);line-height:1.05;letter-spacing:-.04em;margin:0 0 10px}
+.data{color:var(--muted);font-size:15px;margin:0 0 32px}
+.resumo{background:var(--bg2);border-radius:18px;padding:22px 26px;margin:0 0 48px}
+.resumo h2{margin:0 0 8px !important;font-size:17px !important;letter-spacing:0 !important}
+.resumo ul{margin:0;padding-left:1.2em}
+.doc h2{font-weight:700;font-size:24px;letter-spacing:-.02em;margin:48px 0 12px}
+.doc p,.doc li{max-width:66ch;color:var(--ink2)}
+.doc li{margin:6px 0}
+.doc a{color:var(--azul)}
+.lista-google{list-style:none;padding:0 !important;display:grid;gap:10px}
+.lista-google li{border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0;max-width:none}
+.lista-google b{display:block;color:var(--ink)}
+.lista-google span{color:var(--muted);font-size:16px}
+.aviso{background:var(--azul-s);border-radius:14px;padding:16px 20px}
+</style></head><body>
+<header class="topo"><div class="faixa"><nav>
+  <a class="marca" href="index.html"><i>m</i>Matt</a>
+  <a class="so-grande" href="privacidade.html" style="color:var(--ink);font-weight:600">Privacidade</a>
+  <a class="so-grande" href="termos.html">Termos</a>
+  <a class="btn escuro" href="mailto:matt.theassistant@gmail.com?subject=Quero%20conhecer%20o%20Matt">Quero conhecer</a>
+</nav></div></header>
+<main class="doc"><div class="faixa">
+<h1>Política de privacidade</h1>
+<p class="data">Última atualização: 30 de setembro de 2026</p>
+
+<div class="resumo"><h2>Em resumo</h2><ul>
+<li>O Matt só acessa o que você autoriza, e só o necessário.</li>
+<li>Seus dados não são vendidos, não viram anúncio e não treinam inteligência artificial.</li>
+<li>Você pode pedir uma cópia ou apagar tudo quando quiser.</li>
+</ul></div>
+
+<h2>Quem cuida dos dados</h2>
+<p>Contato: <a href="mailto:matt.theassistant@gmail.com">matt.theassistant@gmail.com</a>.</p>
+
+<h2>O que o Matt guarda</h2>
+<ul>
+<li>O que você manda para ele: mensagens, áudios transcritos, fotos e PDFs de comprovantes.</li>
+<li>O que ele organiza: demandas, rotinas, listas, lembretes e o que você pediu para ele lembrar.</li>
+<li>Seu nome e o identificador da sua conta no WhatsApp ou no Telegram. O endereço do WhatsApp fica guardado cifrado.</li>
+</ul>
+<p>O Matt não guarda telefones, números de documentos nem e-mails de outras pessoas no banco de dados. A única exceção é o e-mail da sua conta Google conectada.</p>
+
+<h2>O que o Matt acessa no Google, e para quê</h2>
+<p>Só depois que você autoriza:</p>
+<ul class="lista-google">
+<li><b>Agenda Google</b><span>Ler e criar eventos, para marcar, mover e mostrar seus compromissos.</span></li>
+<li><b>Contatos Google (só leitura)</b><span>Para achar o e-mail de quem você pede para convidar. Seus contatos são só seus; ninguém mais no Matt vê.</span></li>
+<li><b>Google Drive: só os arquivos criados pelo Matt</b><span>Para guardar documentos, comprovantes e as planilhas de caixa e de contatos. O Matt não vê o resto do seu Drive.</span></li>
+<li><b>Google Drive do escritório</b><span>Só a conta do escritório autoriza acesso à pasta de documentos do escritório, para buscar e guardar documentos.</span></li>
+<li><b>Seu e-mail do Google</b><span>Para identificar a conta conectada e compartilhar pastas com você.</span></li>
+</ul>
+<p class="aviso">O uso e a transferência, pelo Matt, de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+
+<h2>Com quem os dados são compartilhados</h2>
+<p>Só com serviços contratados para o Matt funcionar, e só o necessário:</p>
+<ul>
+<li>Serviço de inteligência artificial, para entender suas mensagens e responder.</li>
+<li>Serviço de transcrição, para transformar seus áudios em texto.</li>
+<li>Hospedagem e banco de dados, onde o Matt roda e guarda o que organiza.</li>
+<li>Google, para a sua agenda, contatos, Drive e planilhas.</li>
+</ul>
+<p>Esses serviços não podem usar seus dados para outros fins. Nada é vendido nem cedido a terceiros.</p>
+
+<h2>Segurança</h2>
+<p>As autorizações do Google ficam guardadas cifradas. A permissão de quem vê o quê é imposta pelo banco de dados: cada pessoa só vê os espaços de trabalho de que faz parte.</p>
+
+<h2>Seus direitos</h2>
+<ul>
+<li>Pedir uma cópia do que o Matt guardou de você.</li>
+<li>Pedir para corrigir ou apagar.</li>
+<li>Desconectar o Google quando quiser, pelo Matt ou em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+</ul>
+<p>Para qualquer pedido, escreva para o contato acima. Respondemos em até 30 dias.</p>
+
+<h2>Mudanças</h2>
+<p>Se esta política mudar, a data no topo muda junto, e quem usa o Matt é avisado pelo próprio Matt.</p>
+</div></main>
+
+<footer class="rodape"><div class="faixa">
+  <span><span class="marca" style="font-size:16px;margin:0"><i style="width:24px;height:24px;font-size:12px;border-radius:6px">m</i>Matt</span></span>
+  <a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="mailto:matt.theassistant@gmail.com">Contato</a>
+</div></footer>
