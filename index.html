@@ -334,9 +334,12 @@ dialog.form .msg.ok{color:var(--verde)} dialog.form .msg.erro{color:var(--vermel
     if(!f.nome.value.trim()||!f.email.checkValidity()){msg.className='msg erro';msg.textContent='Preencha nome e um e-mail válido.';return;}
     if(f._honey.value){return;}
     bt.disabled=true; bt.textContent='Enviando…';
-    fetch('https://formsubmit.co/ajax/matt.theassistant@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({nome:f.nome.value.trim(),email:f.email.value.trim(),mensagem:f.mensagem.value.trim(),_subject:'Site do Matt: quero conhecer',_template:'table',_captcha:'false'})})
-    .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true')throw 0;});})
+    var dados=new FormData();
+    dados.append('entry.146320842',f.nome.value.trim());
+    dados.append('entry.433721814',f.email.value.trim());
+    dados.append('entry.2100069781',f.mensagem.value.trim());
+    // Google Formulários da conta do Matt; o Google não devolve a resposta para outro site (no-cors), então rede ok = enviado
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSe3370_z9RU6Bz_fGug-uo_aVReIEiihYAnYjwzFRqnvblydA/formResponse',{method:'POST',mode:'no-cors',body:dados})
     .then(function(){f.reset();msg.className='msg ok';msg.textContent='Recebido! A gente responde no seu e-mail.';bt.textContent='Enviado';})
     .catch(function(){msg.className='msg erro';msg.innerHTML='Não foi agora. Escreva para <a href="mailto:matt.theassistant@gmail.com">matt.theassistant@gmail.com</a>.';bt.disabled=false;bt.textContent='Enviar';});
   });
